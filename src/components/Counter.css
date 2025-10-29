@@ -1,0 +1,72 @@
+.counter-card {
+  max-width: 400px; 
+  width: 90%; 
+  margin: 40px auto;
+  padding: 20px 30px;
+  text-align: center;
+  background: linear-gradient(145deg, #ffffff, #e9eef3);
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", sans-serif;
+  transition: transform 0.2s ease;
+}
+
+.counter-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.counter-card h1 {
+  color: #101025;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.counter-card h3 {
+  font-size: 2.5rem;
+  color:#f84863;
+  margin: 10px 0 30px;
+}
+
+.btn-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-increament {
+  background-color: #4caf50;
+}
+.btn-decreament {
+  background-color: #2196f3;
+}
+.btn-reset {
+  background-color: #f44336;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 480px) {
+  .btn-card {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  button {
+    width: 100px;
+  }
+}
