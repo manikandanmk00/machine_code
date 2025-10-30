@@ -1,0 +1,53 @@
+.strike-through {
+  text-decoration: line-through;
+}
+
+.todo-container {
+  height: 200px;
+  max-width: 400px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 30px, auto;
+  border: 2px solid black;
+  background: linear-gradient(145deg, #dacde9, #573bc7);
+  border-radius: 20px;
+}
+.todo-container h1{
+  text-align: center;
+  color: rgb(11, 8, 12);
+  padding: 10px;
+}
+.todo-container input {
+  margin: 20px;
+  padding: 10px;
+  border : 2px solid black;
+  border-radius: 10px;
+}
+button {
+  padding :10px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color:rgb(63, 9, 111);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  transform: scale(1.03);
+}
+.todo-list-view {
+  height: 400px;
+  max-width: 400px;
+  background: linear-gradient(130deg, #8f5dc8, #e0e0e0);
+  overflow-y: scroll;
+  overflow-x:hidden;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 800;
+  border-radius: 10px;
+  color:#041518;
+  
+}
+.todo-list-view ul{
+ list-style: none;
+}
