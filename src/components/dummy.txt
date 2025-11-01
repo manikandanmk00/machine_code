@@ -1,0 +1,60 @@
+import React, { useState } from 'react';
+import './styles.css'
+
+
+
+
+function ChipsInput() {
+  const [input, setInput] = useState("");
+  const [chips, setChips] = useState([]);
+  const [idCounter, setIdCounter] = useState(0);
+
+  
+  const handleInputChange = (event) => {
+    setInput(event.target.value);
+  }
+
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter' && input.trim() !== "") {
+      const newChip = {
+        id: idCounter,
+        label: input.trim()
+      };
+      setChips([...chips, newChip]);
+      setIdCounter([idCounter + 1]);
+      setInput("");
+    }
+  }
+  const deleteChips = (id)=> {
+      setChips(chips.filter((chip)=> chip.id !== id))
+  }
+  return (
+    <div className='main-container'>
+      <h2>Chips Input</h2>
+      <input
+        type="text" 
+        placeholder="Type a chip and press tag"
+        value={input}
+        className="input"
+        onChange={handleInputChange}
+        onKeyDown={handleKeyPress}
+      />
+
+    
+
+    <div>
+        {chips.map((chip)=> (
+          <div key={chip.id}>
+            <span>{chip.label}</span>
+            <button onClick={() => deleteChips(chip.id)}>X</button>
+          </div>
+      ))}
+    </div>
+           
+     
+
+    </div>
+  );
+}
+
+export default ChipsInput;
